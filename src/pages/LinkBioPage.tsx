@@ -14,7 +14,7 @@ const links = [
   {
     title: "Написать в Telegram",
     description: "Задайте вопрос или запишитесь на приём",
-    href: "#",
+    href: "https://t.me/Gulsi_mind",
     icon: Send,
   },
   {
@@ -38,7 +38,7 @@ const links = [
 ]
 
 const socials = [
-  { icon: Send, href: "#", label: "Telegram" },
+  { icon: Send, href: "https://t.me/Gulsi_mind", label: "Telegram" },
   { icon: MessageCircle, href: "#", label: "WhatsApp" },
   { icon: Mail, href: "#", label: "Email" },
 ]
