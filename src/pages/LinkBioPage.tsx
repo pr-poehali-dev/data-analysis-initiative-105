@@ -20,7 +20,7 @@ const links = [
   {
     title: "Написать в WhatsApp",
     description: "Отвечу в течение нескольких часов",
-    href: "#",
+    href: "https://wa.me/79822134772",
     icon: MessageCircle,
   },
   {
@@ -39,7 +39,7 @@ const links = [
 
 const socials = [
   { icon: Send, href: "https://t.me/Gulsi_mind", label: "Telegram" },
-  { icon: MessageCircle, href: "#", label: "WhatsApp" },
+  { icon: MessageCircle, href: "https://wa.me/79822134772", label: "WhatsApp" },
   { icon: Mail, href: "#", label: "Email" },
 ]
 
