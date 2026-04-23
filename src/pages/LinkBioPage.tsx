@@ -4,7 +4,7 @@ import { ProfileSection } from "@/components/ProfileSection"
 import { LinkCard } from "@/components/LinkCard"
 import { SocialFooter } from "@/components/SocialFooter"
 import { ConsultationModal } from "@/components/ConsultationModal"
-import { Calendar, Mail, FileText, MessageCircle, Send, Heart } from "lucide-react"
+import { Calendar, Mail, MessageCircle, Send } from "lucide-react"
 
 const links = [
   {
@@ -24,18 +24,6 @@ const links = [
     description: "Отвечу в течение нескольких часов",
     href: "https://max.ru/u/f9LHodD0cOJRbH5pTS7TKa0mRxhWOF7sTZUbq_421Vgko-xeyJ3ve-3OuT0",
     icon: MessageCircle,
-  },
-  {
-    title: "Полезные материалы",
-    description: "Статьи и упражнения для вашей семьи",
-    href: "#",
-    icon: FileText,
-  },
-  {
-    title: "Обо мне и моём подходе",
-    description: "Как я работаю и чем могу помочь",
-    href: "#",
-    icon: Heart,
   },
 ]
 
@@ -216,8 +204,8 @@ export function LinkBioPage() {
         <motion.div variants={itemVariants} className="pt-2">
           <ProfileSection
             name="Гульсина Ганиева"
-            bio="Семейный психолог · Помогаю парам и семьям найти гармонию и взаимопонимание"
-            imageUrl="https://cdn.poehali.dev/projects/026aaa25-0f67-409c-8c03-205c326faa62/files/a679ed8b-2cfb-4144-8c41-228489ee4185.jpg"
+            bio=""
+            imageUrl="https://cdn.poehali.dev/projects/026aaa25-0f67-409c-8c03-205c326faa62/bucket/2fe88b70-ba00-44b9-90a0-3b0ef578de87.png"
           />
         </motion.div>
 
