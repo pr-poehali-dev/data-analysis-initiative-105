@@ -1,7 +1,9 @@
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
 import { LinkCard } from "@/components/LinkCard"
 import { SocialFooter } from "@/components/SocialFooter"
+import { ConsultationModal } from "@/components/ConsultationModal"
 import { Calendar, Mail, FileText, MessageCircle, Send, Heart } from "lucide-react"
 
 const links = [
@@ -71,6 +73,8 @@ const itemVariants = {
 }
 
 export function LinkBioPage() {
+  const [modalOpen, setModalOpen] = useState(false)
+
   return (
     <main className="relative min-h-screen px-6 py-10 flex flex-col overflow-hidden">
       <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-50 via-white to-slate-100" />
@@ -220,7 +224,10 @@ export function LinkBioPage() {
         <motion.div className="space-y-3 py-8" variants={containerVariants}>
           {links.map((link) => (
             <motion.div key={link.title} variants={itemVariants}>
-              <LinkCard {...link} />
+              <LinkCard
+                {...link}
+                onClick={link.title === "Записаться на консультацию" ? () => setModalOpen(true) : undefined}
+              />
             </motion.div>
           ))}
         </motion.div>
@@ -229,6 +236,8 @@ export function LinkBioPage() {
           <SocialFooter socials={socials} copyright="2026 Гульсина Ганиева" />
         </motion.div>
       </motion.div>
+
+      <ConsultationModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </main>
   )
 }
