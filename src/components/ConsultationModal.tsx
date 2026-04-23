@@ -13,8 +13,13 @@ export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
   const [about, setAbout] = useState("")
   const [sent, setSent] = useState(false)
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    await fetch('https://functions.poehali.dev/30ba79e3-09c7-4f47-bf78-41a5b1698fc2', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, about })
+    })
     setSent(true)
   }
 
