@@ -2,38 +2,38 @@ import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
 import { LinkCard } from "@/components/LinkCard"
 import { SocialFooter } from "@/components/SocialFooter"
-import { Globe, Youtube, Mail, ShoppingBag, FileText, MessageCircle, Send } from "lucide-react"
+import { Calendar, Mail, FileText, MessageCircle, Send, Heart } from "lucide-react"
 
 const links = [
   {
-    title: "Мой сайт",
-    description: "Портфолио и услуги",
+    title: "Записаться на консультацию",
+    description: "Первая встреча — знакомство и анализ запроса",
     href: "#",
-    icon: Globe,
+    icon: Calendar,
   },
   {
-    title: "YouTube канал",
-    description: "Видео и туториалы",
-    href: "#",
-    icon: Youtube,
-  },
-  {
-    title: "Магазин",
-    description: "Товары и услуги",
-    href: "#",
-    icon: ShoppingBag,
-  },
-  {
-    title: "Telegram",
-    description: "Написать напрямую",
+    title: "Написать в Telegram",
+    description: "Задайте вопрос или запишитесь на приём",
     href: "#",
     icon: Send,
   },
   {
-    title: "Бесплатные материалы",
-    description: "Шаблоны и гайды",
+    title: "Написать в WhatsApp",
+    description: "Отвечу в течение нескольких часов",
+    href: "#",
+    icon: MessageCircle,
+  },
+  {
+    title: "Полезные материалы",
+    description: "Статьи и упражнения для вашей семьи",
     href: "#",
     icon: FileText,
+  },
+  {
+    title: "Обо мне и моём подходе",
+    description: "Как я работаю и чем могу помочь",
+    href: "#",
+    icon: Heart,
   },
 ]
 
@@ -211,9 +211,9 @@ export function LinkBioPage() {
       >
         <motion.div variants={itemVariants} className="pt-2">
           <ProfileSection
-            name="GlassLinks"
-            bio="Креативный дизайнер и разработчик"
-            imageUrl="/images/544291433-18043960274659947-5766591717842883293-n.jpg"
+            name="Гульсина Ганиева"
+            bio="Семейный психолог · Помогаю парам и семьям найти гармонию и взаимопонимание"
+            imageUrl="https://cdn.poehali.dev/projects/026aaa25-0f67-409c-8c03-205c326faa62/files/a679ed8b-2cfb-4144-8c41-228489ee4185.jpg"
           />
         </motion.div>
 
@@ -226,7 +226,7 @@ export function LinkBioPage() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="pb-2">
-          <SocialFooter socials={socials} copyright="2025 GlassLinks" />
+          <SocialFooter socials={socials} copyright="2026 Гульсина Ганиева" />
         </motion.div>
       </motion.div>
     </main>
