@@ -18,7 +18,7 @@ const links = [
     icon: Send,
   },
   {
-    title: "Написать в WhatsApp",
+    title: "Написать в Max",
     description: "Отвечу в течение нескольких часов",
     href: "https://wa.me/79822134772",
     icon: MessageCircle,
