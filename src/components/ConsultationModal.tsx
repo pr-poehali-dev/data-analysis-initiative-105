@@ -39,10 +39,10 @@ export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
     padding: "12px 16px",
     fontSize: "15px",
     outline: "none",
-    background: "rgba(255, 255, 255, 0.7)",
-    border: "1px solid rgba(200, 200, 220, 0.5)",
-    boxShadow: "inset 0 1px 3px rgba(0,0,0,0.04)",
-    color: "#1a1a2e",
+    background: "rgba(255, 248, 238, 0.8)",
+    border: "1px solid rgba(200, 160, 100, 0.3)",
+    boxShadow: "inset 0 1px 3px rgba(0,0,0,0.03)",
+    color: "#4a3728",
     transition: "border-color 0.2s",
   } as React.CSSProperties
 
@@ -62,28 +62,29 @@ export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
 
           <motion.div
             key="modal"
-            initial={{ opacity: 0, y: 60, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 40, scale: 0.95 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
-            className="fixed z-50 left-1/2 bottom-0 w-full max-w-[420px]"
-            style={{ transform: "translateX(-50%)" }}
+            className="fixed z-50 inset-0 flex items-center justify-center px-4"
           >
             <div
               style={{
-                background: "rgba(255,255,255,0.92)",
+                background: "rgba(253, 246, 238, 0.97)",
                 backdropFilter: "blur(40px) saturate(180%)",
-                borderRadius: "28px 28px 0 0",
-                boxShadow: "0 -8px 40px rgba(0,0,0,0.12)",
-                padding: "28px 24px 40px",
+                borderRadius: "28px",
+                boxShadow: "0 8px 60px rgba(150, 100, 40, 0.15)",
+                padding: "32px 24px 36px",
+                width: "100%",
+                maxWidth: "420px",
               }}
             >
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-[18px] font-semibold text-gray-800">Записаться на консультацию</h2>
+                <h2 className="text-[18px] font-semibold" style={{ color: "#4a3728" }}>Записаться на консультацию</h2>
                 <button
                   onClick={handleClose}
-                  className="flex items-center justify-center w-8 h-8 rounded-full text-gray-500 hover:text-gray-700 transition-colors"
-                  style={{ background: "rgba(0,0,0,0.06)" }}
+                  className="flex items-center justify-center w-8 h-8 rounded-full transition-colors"
+                  style={{ background: "rgba(150,100,50,0.1)", color: "#8a6040" }}
                 >
                   <X size={16} />
                 </button>
@@ -96,12 +97,12 @@ export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
                   className="text-center py-8"
                 >
                   <div className="text-4xl mb-4">✨</div>
-                  <p className="text-[17px] font-semibold text-gray-800 mb-2">Заявка отправлена!</p>
-                  <p className="text-[14px] text-gray-500">Гульсина свяжется с вами в ближайшее время</p>
+                  <p className="text-[17px] font-semibold mb-2" style={{ color: "#4a3728" }}>Заявка отправлена!</p>
+                  <p className="text-[14px]" style={{ color: "#9a7860" }}>Гульсина свяжется с вами в ближайшее время</p>
                   <button
                     onClick={handleClose}
-                    className="mt-6 px-6 py-2.5 rounded-xl text-[14px] font-medium text-gray-700 transition-colors"
-                    style={{ background: "rgba(0,0,0,0.07)" }}
+                    className="mt-6 px-6 py-2.5 rounded-xl text-[14px] font-medium transition-colors"
+                    style={{ background: "rgba(150,100,50,0.1)", color: "#7a5535" }}
                   >
                     Закрыть
                   </button>
@@ -109,7 +110,7 @@ export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                   <div>
-                    <label className="block text-[12px] font-medium text-gray-500 mb-1.5 ml-1">Ваше имя</label>
+                    <label className="block text-[12px] font-medium mb-1.5 ml-1" style={{ color: "#9a7860" }}>Ваше имя</label>
                     <input
                       style={inputStyle}
                       type="text"
@@ -121,7 +122,7 @@ export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
                   </div>
 
                   <div>
-                    <label className="block text-[12px] font-medium text-gray-500 mb-1.5 ml-1">Номер телефона</label>
+                    <label className="block text-[12px] font-medium mb-1.5 ml-1" style={{ color: "#9a7860" }}>Номер телефона</label>
                     <input
                       style={inputStyle}
                       type="tel"
@@ -133,7 +134,7 @@ export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
                   </div>
 
                   <div>
-                    <label className="block text-[12px] font-medium text-gray-500 mb-1.5 ml-1">Немного о себе</label>
+                    <label className="block text-[12px] font-medium mb-1.5 ml-1" style={{ color: "#9a7860" }}>Немного о себе</label>
                     <textarea
                       style={{ ...inputStyle, resize: "none" } as React.CSSProperties}
                       rows={3}
@@ -150,8 +151,8 @@ export function ConsultationModal({ open, onClose }: ConsultationModalProps) {
                     whileTap={{ scale: 0.97 }}
                     className="w-full py-3.5 rounded-[16px] text-[15px] font-semibold text-white mt-1"
                     style={{
-                      background: "linear-gradient(135deg, #9333ea, #ec4899)",
-                      boxShadow: "0 4px 20px rgba(147, 51, 234, 0.3)",
+                      background: "linear-gradient(135deg, #c8956a, #d4a06a)",
+                      boxShadow: "0 4px 20px rgba(180, 120, 60, 0.3)",
                     }}
                   >
                     Отправить заявку

@@ -35,7 +35,8 @@ export function SocialFooter({ socials, copyright }: SocialFooterProps) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={social.label}
-            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-500 transition-colors hover:text-gray-700"
+            className="flex h-10 w-10 items-center justify-center rounded-full transition-colors"
+            style={{ color: "#b08060" }}
             whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 600, damping: 20 }}
@@ -45,7 +46,7 @@ export function SocialFooter({ socials, copyright }: SocialFooterProps) {
         ))}
       </div>
 
-      <p className="text-[11px] text-gray-400">{copyright}</p>
+      <p className="text-[11px]" style={{ color: "#c0a080" }}>{copyright}</p>
     </div>
   )
 }

@@ -77,13 +77,13 @@ export function LinkBioPage() {
 
   return (
     <main className="relative min-h-screen px-6 py-10 flex flex-col overflow-hidden">
-      <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-50 via-white to-slate-100" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-br from-[#f5ede0] via-[#fdf6ee] to-[#f0e4d0]" />
 
       {/* Animated gradient orbs */}
       <motion.div
         className="fixed z-0 w-[500px] h-[500px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(147, 51, 234, 0.25) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(210, 160, 100, 0.25) 0%, transparent 70%)",
           filter: "blur(60px)",
           top: "-10%",
           left: "-10%",
@@ -103,7 +103,7 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[600px] h-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(220, 150, 90, 0.2) 0%, transparent 70%)",
           filter: "blur(80px)",
           top: "30%",
           right: "-20%",
@@ -123,7 +123,7 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[450px] h-[450px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(190, 140, 80, 0.2) 0%, transparent 70%)",
           filter: "blur(70px)",
           bottom: "-5%",
           left: "20%",
@@ -143,7 +143,7 @@ export function LinkBioPage() {
       <motion.div
         className="fixed z-0 w-[350px] h-[350px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(200, 155, 95, 0.15) 0%, transparent 70%)",
           filter: "blur(50px)",
           top: "60%",
           left: "-5%",
