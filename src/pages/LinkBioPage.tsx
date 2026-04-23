@@ -1,37 +1,9 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { ProfileSection } from "@/components/ProfileSection"
-import { LinkCard } from "@/components/LinkCard"
 import { SocialFooter } from "@/components/SocialFooter"
 import { ConsultationModal } from "@/components/ConsultationModal"
-import { Calendar, Mail, MessageCircle, Send } from "lucide-react"
-
-const links = [
-  {
-    title: "Записаться на консультацию",
-    description: "Первая встреча — знакомство и анализ запроса",
-    href: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Написать в Telegram",
-    description: "Задайте вопрос или запишитесь на приём",
-    href: "https://t.me/Gulsi_mind",
-    icon: Send,
-  },
-  {
-    title: "Написать в Max",
-    description: "Отвечу в течение нескольких часов",
-    href: "https://max.ru/u/f9LHodD0cOJRbH5pTS7TKa0mRxhWOF7sTZUbq_421Vgko-xeyJ3ve-3OuT0",
-    icon: MessageCircle,
-  },
-]
-
-const socials = [
-  { icon: Send, href: "https://t.me/Gulsi_mind", label: "Telegram" },
-  { icon: MessageCircle, href: "https://wa.me/79822134772", label: "WhatsApp" },
-  { icon: Mail, href: "#", label: "Email" },
-]
+import { Calendar, MessageCircle, Send } from "lucide-react"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -62,6 +34,12 @@ const itemVariants = {
 
 export function LinkBioPage() {
   const [modalOpen, setModalOpen] = useState(false)
+
+  const socials = [
+    { icon: Send, href: "https://t.me/Gulsi_mind", label: "Telegram" },
+    { icon: MessageCircle, href: "https://max.ru/u/f9LHodD0cOJRbH5pTS7TKa0mRxhWOF7sTZUbq_421Vgko-xeyJ3ve-3OuT0", label: "Max" },
+    { icon: Calendar, label: "Записаться", onClick: () => setModalOpen(true) },
+  ]
 
   return (
     <main className="relative min-h-screen px-6 py-10 flex flex-col overflow-hidden">
@@ -207,17 +185,6 @@ export function LinkBioPage() {
             bio=""
             imageUrl="https://cdn.poehali.dev/projects/026aaa25-0f67-409c-8c03-205c326faa62/bucket/2fe88b70-ba00-44b9-90a0-3b0ef578de87.png"
           />
-        </motion.div>
-
-        <motion.div className="space-y-3 py-8" variants={containerVariants}>
-          {links.map((link) => (
-            <motion.div key={link.title} variants={itemVariants}>
-              <LinkCard
-                {...link}
-                onClick={link.title === "Записаться на консультацию" ? () => setModalOpen(true) : undefined}
-              />
-            </motion.div>
-          ))}
         </motion.div>
 
         <motion.div variants={itemVariants} className="pb-2">
