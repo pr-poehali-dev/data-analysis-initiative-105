@@ -20,7 +20,7 @@ const links = [
   {
     title: "Написать в Max",
     description: "Отвечу в течение нескольких часов",
-    href: "https://wa.me/79822134772",
+    href: "https://max.ru/u/f9LHodD0cOJRbH5pTS7TKa0mRxhWOF7sTZUbq_421Vgko-xeyJ3ve-3OuT0",
     icon: MessageCircle,
   },
   {
